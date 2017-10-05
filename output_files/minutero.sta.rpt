@@ -1,0 +1,1986 @@
+TimeQuest Timing Analyzer report for minutero
+Wed Oct 04 17:05:19 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'reloj'
+ 12. Slow Model Setup: 'divi[24]'
+ 13. Slow Model Hold: 'reloj'
+ 14. Slow Model Hold: 'divi[24]'
+ 15. Slow Model Minimum Pulse Width: 'reloj'
+ 16. Slow Model Minimum Pulse Width: 'divi[24]'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'reloj'
+ 27. Fast Model Setup: 'divi[24]'
+ 28. Fast Model Hold: 'reloj'
+ 29. Fast Model Hold: 'divi[24]'
+ 30. Fast Model Minimum Pulse Width: 'reloj'
+ 31. Fast Model Minimum Pulse Width: 'divi[24]'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; minutero                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; divi[24]   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divi[24] } ;
+; reloj      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { reloj }    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 224.52 MHz ; 224.52 MHz      ; reloj      ;      ;
+; 238.55 MHz ; 238.55 MHz      ; divi[24]   ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; reloj    ; -3.454 ; -55.037       ;
+; divi[24] ; -3.192 ; -37.280       ;
++----------+--------+---------------+
+
+
++-----------------------------------+
+; Slow Model Hold Summary           ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; reloj    ; -2.289 ; -2.289        ;
+; divi[24] ; 0.499  ; 0.000         ;
++----------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; reloj    ; -1.941 ; -39.041            ;
+; divi[24] ; -0.742 ; -23.744            ;
++----------+--------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'reloj'                                                                           ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; -3.454 ; divi[1]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.480      ;
+; -3.368 ; divi[1]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.394      ;
+; -3.282 ; divi[1]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.308      ;
+; -3.196 ; divi[1]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.222      ;
+; -3.112 ; divi[0]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.138      ;
+; -3.076 ; divi[2]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.102      ;
+; -3.026 ; divi[0]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.052      ;
+; -3.006 ; divi[1]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.032      ;
+; -2.990 ; divi[3]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.016      ;
+; -2.990 ; divi[2]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 4.016      ;
+; -2.940 ; divi[0]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.966      ;
+; -2.920 ; divi[1]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.946      ;
+; -2.904 ; divi[3]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.930      ;
+; -2.904 ; divi[2]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.930      ;
+; -2.860 ; divi[4]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.886      ;
+; -2.854 ; divi[0]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.880      ;
+; -2.834 ; divi[1]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.860      ;
+; -2.818 ; divi[3]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.844      ;
+; -2.818 ; divi[2]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.844      ;
+; -2.774 ; divi[4]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.800      ;
+; -2.748 ; divi[1]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.774      ;
+; -2.732 ; divi[3]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.758      ;
+; -2.718 ; divi[5]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.744      ;
+; -2.688 ; divi[4]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.714      ;
+; -2.664 ; divi[0]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.690      ;
+; -2.662 ; divi[1]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.688      ;
+; -2.632 ; divi[5]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.658      ;
+; -2.628 ; divi[2]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.654      ;
+; -2.602 ; divi[4]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.628      ;
+; -2.578 ; divi[6]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.604      ;
+; -2.578 ; divi[0]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.604      ;
+; -2.576 ; divi[1]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.602      ;
+; -2.546 ; divi[7]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.572      ;
+; -2.546 ; divi[5]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.572      ;
+; -2.542 ; divi[3]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.568      ;
+; -2.542 ; divi[2]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.568      ;
+; -2.492 ; divi[6]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.518      ;
+; -2.492 ; divi[0]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.518      ;
+; -2.490 ; divi[1]   ; divi[14] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.516      ;
+; -2.460 ; divi[7]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.486      ;
+; -2.460 ; divi[5]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.486      ;
+; -2.456 ; divi[3]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.482      ;
+; -2.456 ; divi[2]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.482      ;
+; -2.412 ; divi[4]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.438      ;
+; -2.406 ; divi[8]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.432      ;
+; -2.406 ; divi[6]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.432      ;
+; -2.406 ; divi[0]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.432      ;
+; -2.404 ; divi[1]   ; divi[13] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.430      ;
+; -2.375 ; divi[9]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.401      ;
+; -2.374 ; divi[7]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.400      ;
+; -2.370 ; divi[3]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.396      ;
+; -2.370 ; divi[2]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.396      ;
+; -2.326 ; divi[4]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.352      ;
+; -2.320 ; divi[8]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.346      ;
+; -2.320 ; divi[6]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.346      ;
+; -2.320 ; divi[0]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.346      ;
+; -2.289 ; divi[9]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.315      ;
+; -2.288 ; divi[7]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.314      ;
+; -2.284 ; divi[3]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.310      ;
+; -2.284 ; divi[2]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.310      ;
+; -2.270 ; divi[5]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.296      ;
+; -2.240 ; divi[4]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.266      ;
+; -2.239 ; divi[10]  ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.265      ;
+; -2.234 ; divi[8]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.260      ;
+; -2.234 ; divi[0]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.260      ;
+; -2.215 ; divi[1]   ; divi[12] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.255      ;
+; -2.203 ; divi[9]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.229      ;
+; -2.198 ; divi[3]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.224      ;
+; -2.198 ; divi[2]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.224      ;
+; -2.184 ; divi[5]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.210      ;
+; -2.154 ; divi[4]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.180      ;
+; -2.153 ; divi[11]  ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.179      ;
+; -2.153 ; divi[10]  ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.179      ;
+; -2.148 ; divi[8]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.174      ;
+; -2.148 ; divi[0]   ; divi[14] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.174      ;
+; -2.130 ; divi[6]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.156      ;
+; -2.129 ; divi[1]   ; divi[11] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.169      ;
+; -2.117 ; divi[9]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.143      ;
+; -2.112 ; divi[3]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.138      ;
+; -2.112 ; divi[2]   ; divi[14] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.138      ;
+; -2.098 ; divi[7]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.124      ;
+; -2.098 ; divi[5]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.124      ;
+; -2.087 ; divi[12]  ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.113      ;
+; -2.068 ; divi[4]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.094      ;
+; -2.067 ; divi[11]  ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.093      ;
+; -2.067 ; divi[10]  ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.093      ;
+; -2.062 ; divi[0]   ; divi[13] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.088      ;
+; -2.044 ; divi[6]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.070      ;
+; -2.043 ; divi[1]   ; divi[10] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 3.083      ;
+; -2.026 ; divi[3]   ; divi[14] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.052      ;
+; -2.026 ; divi[2]   ; divi[13] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.052      ;
+; -2.012 ; divi[7]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.038      ;
+; -2.012 ; divi[5]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.038      ;
+; -2.001 ; divi[12]  ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.027      ;
+; -1.982 ; divi[4]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.008      ;
+; -1.981 ; divi[11]  ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.007      ;
+; -1.981 ; divi[10]  ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 3.007      ;
+; -1.958 ; divi[8]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 2.984      ;
+; -1.958 ; divi[6]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 2.984      ;
+; -1.957 ; divi[1]   ; divi[9]  ; reloj        ; reloj       ; 1.000        ; 0.000      ; 2.997      ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'divi[24]'                                                                                           ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; -3.192 ; contDecSeg[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 4.228      ;
+; -3.191 ; contDecSeg[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 4.227      ;
+; -3.189 ; contDecSeg[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 4.225      ;
+; -3.162 ; contDecSeg[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 4.198      ;
+; -3.161 ; contDecSeg[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 4.197      ;
+; -3.159 ; contDecSeg[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 4.195      ;
+; -3.061 ; contUniSeg[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 4.098      ;
+; -3.059 ; contUniSeg[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 4.096      ;
+; -3.057 ; contUniSeg[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 4.094      ;
+; -3.017 ; contUniSeg[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 4.055      ;
+; -3.001 ; contDecSeg[2]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 4.038      ;
+; -2.971 ; contDecSeg[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 4.008      ;
+; -2.858 ; contDecSeg[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.894      ;
+; -2.857 ; contDecSeg[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.893      ;
+; -2.855 ; contDecSeg[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.891      ;
+; -2.825 ; contUniSeg[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.862      ;
+; -2.823 ; contUniSeg[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.860      ;
+; -2.821 ; contUniSeg[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.858      ;
+; -2.781 ; contUniSeg[2]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.819      ;
+; -2.765 ; contDecSeg[2]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.801      ;
+; -2.740 ; contDecSeg[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.776      ;
+; -2.739 ; contDecSeg[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.775      ;
+; -2.737 ; contDecSeg[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.773      ;
+; -2.735 ; contDecSeg[3]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.771      ;
+; -2.687 ; contDecSeg[2]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.724      ;
+; -2.687 ; contDecSeg[2]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.724      ;
+; -2.667 ; contDecSeg[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.704      ;
+; -2.661 ; contUniSeg[1]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.699      ;
+; -2.661 ; contUniSeg[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.699      ;
+; -2.659 ; contUniMin[2]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.699      ;
+; -2.657 ; contDecSeg[3]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.694      ;
+; -2.657 ; contDecSeg[3]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.694      ;
+; -2.591 ; contUniMin[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.630      ;
+; -2.590 ; contUniMin[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.629      ;
+; -2.590 ; contUniMin[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.630      ;
+; -2.588 ; contUniMin[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.627      ;
+; -2.576 ; contUniSeg[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.613      ;
+; -2.574 ; contUniSeg[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.611      ;
+; -2.572 ; contUniSeg[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.609      ;
+; -2.557 ; contUniSeg[1]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.594      ;
+; -2.549 ; contDecSeg[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.586      ;
+; -2.532 ; contUniSeg[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.570      ;
+; -2.522 ; contUniMin[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.561      ;
+; -2.521 ; contUniMin[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.560      ;
+; -2.519 ; contUniMin[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.558      ;
+; -2.471 ; contUniSeg[1]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.512      ;
+; -2.470 ; contUniSeg[1]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.511      ;
+; -2.470 ; contUniSeg[1]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.511      ;
+; -2.431 ; contDecSeg[1]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.467      ;
+; -2.425 ; contUniSeg[2]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.463      ;
+; -2.425 ; contUniSeg[2]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.463      ;
+; -2.398 ; contUniSeg[1]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.439      ;
+; -2.366 ; contUniSeg[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.403      ;
+; -2.364 ; contUniSeg[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.401      ;
+; -2.362 ; contUniSeg[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.399      ;
+; -2.353 ; contDecSeg[1]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.390      ;
+; -2.353 ; contDecSeg[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.390      ;
+; -2.343 ; contUniMin[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.383      ;
+; -2.322 ; contUniSeg[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.360      ;
+; -2.321 ; contUniSeg[2]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.358      ;
+; -2.313 ; contDecSeg[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.004     ; 3.349      ;
+; -2.275 ; contUniMin[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.314      ;
+; -2.274 ; contUniMin[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.313      ;
+; -2.272 ; contUniMin[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.311      ;
+; -2.235 ; contDecSeg[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.272      ;
+; -2.235 ; contDecSeg[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.272      ;
+; -2.235 ; contUniSeg[2]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.276      ;
+; -2.234 ; contUniSeg[2]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.275      ;
+; -2.234 ; contUniSeg[2]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.275      ;
+; -2.188 ; contUniMin[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.228      ;
+; -2.185 ; contDecSeg[2]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.222      ;
+; -2.182 ; contUniMin[2]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.222      ;
+; -2.180 ; contUniMin[2]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.220      ;
+; -2.176 ; contUniSeg[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.214      ;
+; -2.176 ; contUniSeg[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.214      ;
+; -2.164 ; contUniMin[2]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.203      ;
+; -2.162 ; contUniSeg[2]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.203      ;
+; -2.155 ; contDecSeg[3]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.192      ;
+; -2.120 ; contUniMin[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.159      ;
+; -2.119 ; contUniMin[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.158      ;
+; -2.117 ; contUniMin[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.156      ;
+; -2.116 ; contDecSeg[2]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.156      ;
+; -2.113 ; contDecSeg[2]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.153      ;
+; -2.113 ; contUniMin[1]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.153      ;
+; -2.111 ; contUniMin[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.151      ;
+; -2.110 ; contDecSeg[2]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.150      ;
+; -2.095 ; contUniMin[1]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 3.134      ;
+; -2.086 ; contDecSeg[3]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.126      ;
+; -2.083 ; contDecSeg[3]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.123      ;
+; -2.080 ; contDecSeg[3]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.120      ;
+; -2.072 ; contUniSeg[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.003     ; 3.109      ;
+; -2.059 ; contDecMin[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.099      ;
+; -2.057 ; contDecMin[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.097      ;
+; -2.055 ; contDecMin[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.095      ;
+; -2.055 ; contDecSeg[0]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.095      ;
+; -1.986 ; contUniSeg[0]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.027      ;
+; -1.985 ; contUniSeg[0]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.026      ;
+; -1.985 ; contUniSeg[0]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.001      ; 3.026      ;
+; -1.967 ; contDecMin[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 3.007      ;
+; -1.966 ; contUniSeg[3]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 3.004      ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'reloj'                                                                            ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; -2.289 ; divi[24]  ; divi[24] ; divi[24]     ; reloj       ; 0.000        ; 2.738      ; 1.059      ;
+; -1.789 ; divi[24]  ; divi[24] ; divi[24]     ; reloj       ; -0.500       ; 2.738      ; 1.059      ;
+; 0.499  ; divi[0]   ; divi[0]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.805      ;
+; 1.158  ; divi[13]  ; divi[13] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.464      ;
+; 1.164  ; divi[4]   ; divi[4]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.470      ;
+; 1.164  ; divi[6]   ; divi[6]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.470      ;
+; 1.164  ; divi[8]   ; divi[8]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.470      ;
+; 1.165  ; divi[0]   ; divi[1]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.471      ;
+; 1.167  ; divi[14]  ; divi[14] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.473      ;
+; 1.168  ; divi[15]  ; divi[15] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.474      ;
+; 1.168  ; divi[22]  ; divi[22] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.474      ;
+; 1.169  ; divi[10]  ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.475      ;
+; 1.169  ; divi[11]  ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.475      ;
+; 1.169  ; divi[12]  ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.475      ;
+; 1.169  ; divi[17]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.475      ;
+; 1.169  ; divi[20]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.475      ;
+; 1.212  ; divi[21]  ; divi[21] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.518      ;
+; 1.213  ; divi[2]   ; divi[2]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.213  ; divi[3]   ; divi[3]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.213  ; divi[23]  ; divi[23] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.519      ;
+; 1.217  ; divi[5]   ; divi[5]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.523      ;
+; 1.217  ; divi[7]   ; divi[7]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.523      ;
+; 1.217  ; divi[16]  ; divi[16] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.523      ;
+; 1.218  ; divi[9]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.524      ;
+; 1.218  ; divi[18]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.524      ;
+; 1.218  ; divi[19]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.524      ;
+; 1.508  ; divi[1]   ; divi[1]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.814      ;
+; 1.637  ; divi[13]  ; divi[14] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.943      ;
+; 1.643  ; divi[0]   ; divi[2]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.949      ;
+; 1.643  ; divi[6]   ; divi[7]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.949      ;
+; 1.643  ; divi[8]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.949      ;
+; 1.646  ; divi[14]  ; divi[15] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.952      ;
+; 1.647  ; divi[22]  ; divi[23] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.953      ;
+; 1.647  ; divi[15]  ; divi[16] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.953      ;
+; 1.648  ; divi[10]  ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.954      ;
+; 1.648  ; divi[11]  ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.954      ;
+; 1.648  ; divi[17]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.954      ;
+; 1.692  ; divi[21]  ; divi[22] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.998      ;
+; 1.693  ; divi[23]  ; divi[24] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.999      ;
+; 1.693  ; divi[3]   ; divi[4]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.999      ;
+; 1.693  ; divi[2]   ; divi[3]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 1.999      ;
+; 1.697  ; divi[5]   ; divi[6]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.003      ;
+; 1.697  ; divi[7]   ; divi[8]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.003      ;
+; 1.697  ; divi[16]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.003      ;
+; 1.698  ; divi[9]   ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.004      ;
+; 1.698  ; divi[19]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.004      ;
+; 1.698  ; divi[18]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.004      ;
+; 1.723  ; divi[13]  ; divi[15] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.029      ;
+; 1.729  ; divi[0]   ; divi[3]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.035      ;
+; 1.729  ; divi[6]   ; divi[8]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.035      ;
+; 1.729  ; divi[8]   ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.035      ;
+; 1.732  ; divi[14]  ; divi[16] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.038      ;
+; 1.733  ; divi[22]  ; divi[24] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.039      ;
+; 1.733  ; divi[15]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.039      ;
+; 1.734  ; divi[10]  ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.040      ;
+; 1.734  ; divi[17]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.040      ;
+; 1.753  ; divi[4]   ; divi[5]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.059      ;
+; 1.758  ; divi[20]  ; divi[21] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.064      ;
+; 1.771  ; divi[12]  ; divi[13] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 2.063      ;
+; 1.778  ; divi[21]  ; divi[23] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.084      ;
+; 1.779  ; divi[2]   ; divi[4]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.085      ;
+; 1.783  ; divi[5]   ; divi[7]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.089      ;
+; 1.783  ; divi[7]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.089      ;
+; 1.783  ; divi[16]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.089      ;
+; 1.784  ; divi[9]   ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.090      ;
+; 1.784  ; divi[18]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.090      ;
+; 1.809  ; divi[13]  ; divi[16] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.115      ;
+; 1.815  ; divi[0]   ; divi[4]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.121      ;
+; 1.815  ; divi[6]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.121      ;
+; 1.815  ; divi[8]   ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.121      ;
+; 1.818  ; divi[14]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.124      ;
+; 1.819  ; divi[15]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.125      ;
+; 1.820  ; divi[17]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.126      ;
+; 1.837  ; divi[11]  ; divi[13] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 2.129      ;
+; 1.839  ; divi[4]   ; divi[6]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.145      ;
+; 1.844  ; divi[20]  ; divi[22] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.150      ;
+; 1.857  ; divi[12]  ; divi[14] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 2.149      ;
+; 1.864  ; divi[21]  ; divi[24] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.170      ;
+; 1.869  ; divi[5]   ; divi[8]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.175      ;
+; 1.869  ; divi[7]   ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.175      ;
+; 1.869  ; divi[16]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.175      ;
+; 1.870  ; divi[9]   ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.176      ;
+; 1.883  ; divi[3]   ; divi[5]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.189      ;
+; 1.888  ; divi[19]  ; divi[21] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.194      ;
+; 1.895  ; divi[13]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.201      ;
+; 1.901  ; divi[6]   ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.207      ;
+; 1.901  ; divi[8]   ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.207      ;
+; 1.904  ; divi[14]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.210      ;
+; 1.905  ; divi[15]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.211      ;
+; 1.923  ; divi[10]  ; divi[13] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 2.215      ;
+; 1.923  ; divi[11]  ; divi[14] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 2.215      ;
+; 1.925  ; divi[4]   ; divi[7]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.231      ;
+; 1.930  ; divi[20]  ; divi[23] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.236      ;
+; 1.943  ; divi[12]  ; divi[15] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 2.235      ;
+; 1.955  ; divi[5]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.261      ;
+; 1.955  ; divi[7]   ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.261      ;
+; 1.955  ; divi[16]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.261      ;
+; 1.969  ; divi[3]   ; divi[6]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.275      ;
+; 1.969  ; divi[2]   ; divi[5]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.275      ;
+; 1.974  ; divi[19]  ; divi[22] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 2.280      ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'divi[24]'                                                                                           ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; contUniSeg[0]~reg0 ; contUniSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contUniSeg[1]~reg0 ; contUniSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contDecSeg[0]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contDecSeg[1]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contDecSeg[2]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contDecSeg[3]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contUniMin[0]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contUniMin[2]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contUniMin[3]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contUniMin[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contDecMin[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contDecMin[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contDecMin[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; contDecMin[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.805      ;
+; 1.161 ; contDecSeg[0]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.467      ;
+; 1.174 ; contUniSeg[0]~reg0 ; contUniSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.480      ;
+; 1.245 ; contUniMin[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.551      ;
+; 1.288 ; contDecMin[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.594      ;
+; 1.392 ; contUniSeg[1]~reg0 ; contUniSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.698      ;
+; 1.429 ; contUniSeg[1]~reg0 ; contUniSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.735      ;
+; 1.537 ; contUniSeg[0]~reg0 ; contUniSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.843      ;
+; 1.552 ; contUniSeg[3]~reg0 ; contUniSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.858      ;
+; 1.552 ; contUniSeg[3]~reg0 ; contUniSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.858      ;
+; 1.571 ; contUniSeg[3]~reg0 ; contUniSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.877      ;
+; 1.575 ; contUniSeg[0]~reg0 ; contUniSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.881      ;
+; 1.786 ; contUniSeg[2]~reg0 ; contUniSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.092      ;
+; 1.824 ; contUniSeg[2]~reg0 ; contUniSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.130      ;
+; 1.846 ; contUniMin[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.152      ;
+; 1.884 ; contUniMin[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.190      ;
+; 1.892 ; contDecMin[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.198      ;
+; 1.898 ; contDecMin[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.204      ;
+; 1.993 ; contUniSeg[3]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 2.297      ;
+; 2.018 ; contUniMin[2]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.324      ;
+; 2.030 ; contUniSeg[2]~reg0 ; contUniSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.336      ;
+; 2.090 ; contDecMin[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.396      ;
+; 2.095 ; contDecMin[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.401      ;
+; 2.141 ; contUniSeg[3]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.448      ;
+; 2.144 ; contUniSeg[3]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.451      ;
+; 2.147 ; contUniSeg[3]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.454      ;
+; 2.196 ; contDecSeg[1]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.502      ;
+; 2.203 ; contUniSeg[0]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 2.507      ;
+; 2.286 ; contUniMin[1]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.592      ;
+; 2.311 ; contUniSeg[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 2.615      ;
+; 2.337 ; contDecMin[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.643      ;
+; 2.351 ; contUniSeg[0]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.658      ;
+; 2.354 ; contUniSeg[0]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.661      ;
+; 2.357 ; contUniSeg[0]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.664      ;
+; 2.392 ; contDecSeg[0]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.698      ;
+; 2.395 ; contDecSeg[2]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.701      ;
+; 2.398 ; contDecSeg[0]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.704      ;
+; 2.427 ; contUniMin[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 2.732      ;
+; 2.437 ; contUniSeg[3]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.744      ;
+; 2.452 ; contUniSeg[2]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 2.756      ;
+; 2.462 ; contUniMin[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 2.767      ;
+; 2.464 ; contUniMin[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 2.769      ;
+; 2.466 ; contUniMin[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 2.771      ;
+; 2.467 ; contDecSeg[0]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 2.770      ;
+; 2.516 ; contDecSeg[1]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.822      ;
+; 2.521 ; contUniSeg[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 2.825      ;
+; 2.545 ; contUniMin[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.851      ;
+; 2.577 ; contUniSeg[3]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 2.881      ;
+; 2.579 ; contUniSeg[3]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 2.883      ;
+; 2.580 ; contDecSeg[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 2.883      ;
+; 2.582 ; contUniMin[3]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 2.887      ;
+; 2.585 ; contDecSeg[1]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 2.888      ;
+; 2.596 ; contUniSeg[3]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 2.899      ;
+; 2.600 ; contUniSeg[2]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.907      ;
+; 2.600 ; contUniMin[3]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 2.906      ;
+; 2.603 ; contUniSeg[2]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.910      ;
+; 2.606 ; contUniSeg[2]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.913      ;
+; 2.617 ; contUniMin[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 2.922      ;
+; 2.619 ; contUniMin[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 2.924      ;
+; 2.621 ; contUniMin[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 2.926      ;
+; 2.647 ; contUniSeg[0]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 2.954      ;
+; 2.688 ; contUniSeg[1]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 2.992      ;
+; 2.697 ; contDecMin[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 3.003      ;
+; 2.698 ; contDecSeg[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 3.001      ;
+; 2.699 ; contDecMin[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 3.005      ;
+; 2.770 ; contUniSeg[2]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 3.074      ;
+; 2.787 ; contUniSeg[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 3.091      ;
+; 2.789 ; contUniSeg[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 3.093      ;
+; 2.791 ; contDecMin[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 3.097      ;
+; 2.804 ; contDecSeg[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 3.107      ;
+; 2.806 ; contDecSeg[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 3.109      ;
+; 2.806 ; contUniSeg[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 3.109      ;
+; 2.817 ; contDecSeg[3]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 3.123      ;
+; 2.820 ; contDecSeg[3]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 3.126      ;
+; 2.829 ; contUniMin[1]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 3.134      ;
+; 2.836 ; contUniSeg[1]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 3.143      ;
+; 2.839 ; contUniSeg[1]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 3.146      ;
+; 2.842 ; contUniSeg[1]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 3.149      ;
+; 2.847 ; contDecSeg[2]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 3.153      ;
+; 2.864 ; contUniMin[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 3.169      ;
+; 2.866 ; contUniMin[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 3.171      ;
+; 2.868 ; contUniMin[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 3.173      ;
+; 2.889 ; contDecSeg[3]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 3.192      ;
+; 2.896 ; contUniSeg[2]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.001      ; 3.203      ;
+; 2.898 ; contUniMin[2]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 3.203      ;
+; 2.919 ; contDecSeg[2]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 3.222      ;
+; 2.922 ; contDecSeg[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.003     ; 3.225      ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'reloj'                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target       ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; reloj ; Rise       ; reloj        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[0]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[0]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[10]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[10]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[11]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[11]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[12]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[12]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[13]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[13]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[14]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[14]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[15]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[15]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[16]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[16]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[17]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[17]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[18]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[18]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[19]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[19]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[1]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[1]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[20]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[20]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[21]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[21]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[22]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[22]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[23]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[23]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[24]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[24]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[2]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[2]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[3]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[3]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[4]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[4]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[5]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[5]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[6]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[6]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[7]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[7]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[8]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[8]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; reloj ; Rise       ; divi[9]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; reloj ; Rise       ; divi[9]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[16]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[16]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[17]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[17]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[18]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[18]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[19]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[19]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[1]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[1]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[20]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[20]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[21]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[21]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[22]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[22]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[23]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[23]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[24]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[24]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[2]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[2]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[3]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[3]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[4]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[4]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[5]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[5]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[6]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[6]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[7]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[7]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[8]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[8]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[9]|clk  ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'divi[24]'                                                                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[0]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[0]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[1]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[1]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[2]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[2]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[3]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[3]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[0]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[0]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[1]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[1]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[2]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[2]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[3]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[3]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[0]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[0]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[1]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[1]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[2]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[2]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[3]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[3]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[0]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[0]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[1]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[1]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[2]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[2]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[3]~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[3]~reg0        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; divi[24]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; divi[24]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; divi[24]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; divi[24]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; divi[24]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; divi[24]~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rst       ; divi[24]   ; 7.353 ; 7.353 ; Rise       ; divi[24]        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst       ; divi[24]   ; -6.023 ; -6.023 ; Rise       ; divi[24]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; contDecMin[*]  ; divi[24]   ; 8.005  ; 8.005  ; Rise       ; divi[24]        ;
+;  contDecMin[0] ; divi[24]   ; 7.645  ; 7.645  ; Rise       ; divi[24]        ;
+;  contDecMin[1] ; divi[24]   ; 7.606  ; 7.606  ; Rise       ; divi[24]        ;
+;  contDecMin[2] ; divi[24]   ; 8.005  ; 8.005  ; Rise       ; divi[24]        ;
+;  contDecMin[3] ; divi[24]   ; 7.671  ; 7.671  ; Rise       ; divi[24]        ;
+; contDecSeg[*]  ; divi[24]   ; 8.037  ; 8.037  ; Rise       ; divi[24]        ;
+;  contDecSeg[0] ; divi[24]   ; 7.639  ; 7.639  ; Rise       ; divi[24]        ;
+;  contDecSeg[1] ; divi[24]   ; 8.037  ; 8.037  ; Rise       ; divi[24]        ;
+;  contDecSeg[2] ; divi[24]   ; 7.708  ; 7.708  ; Rise       ; divi[24]        ;
+;  contDecSeg[3] ; divi[24]   ; 7.479  ; 7.479  ; Rise       ; divi[24]        ;
+; contUniMin[*]  ; divi[24]   ; 8.322  ; 8.322  ; Rise       ; divi[24]        ;
+;  contUniMin[0] ; divi[24]   ; 7.109  ; 7.109  ; Rise       ; divi[24]        ;
+;  contUniMin[1] ; divi[24]   ; 7.396  ; 7.396  ; Rise       ; divi[24]        ;
+;  contUniMin[2] ; divi[24]   ; 7.636  ; 7.636  ; Rise       ; divi[24]        ;
+;  contUniMin[3] ; divi[24]   ; 8.322  ; 8.322  ; Rise       ; divi[24]        ;
+; contUniSeg[*]  ; divi[24]   ; 8.102  ; 8.102  ; Rise       ; divi[24]        ;
+;  contUniSeg[0] ; divi[24]   ; 7.213  ; 7.213  ; Rise       ; divi[24]        ;
+;  contUniSeg[1] ; divi[24]   ; 7.533  ; 7.533  ; Rise       ; divi[24]        ;
+;  contUniSeg[2] ; divi[24]   ; 7.066  ; 7.066  ; Rise       ; divi[24]        ;
+;  contUniSeg[3] ; divi[24]   ; 8.102  ; 8.102  ; Rise       ; divi[24]        ;
+; disDecMin[*]   ; divi[24]   ; 10.408 ; 10.408 ; Rise       ; divi[24]        ;
+;  disDecMin[0]  ; divi[24]   ; 9.459  ; 9.459  ; Rise       ; divi[24]        ;
+;  disDecMin[1]  ; divi[24]   ; 9.457  ; 9.457  ; Rise       ; divi[24]        ;
+;  disDecMin[2]  ; divi[24]   ; 10.408 ; 10.408 ; Rise       ; divi[24]        ;
+;  disDecMin[3]  ; divi[24]   ; 9.505  ; 9.505  ; Rise       ; divi[24]        ;
+;  disDecMin[4]  ; divi[24]   ; 9.074  ; 9.074  ; Rise       ; divi[24]        ;
+;  disDecMin[5]  ; divi[24]   ; 9.456  ; 9.456  ; Rise       ; divi[24]        ;
+;  disDecMin[6]  ; divi[24]   ; 8.967  ; 8.967  ; Rise       ; divi[24]        ;
+; disDecSeg[*]   ; divi[24]   ; 10.245 ; 10.245 ; Rise       ; divi[24]        ;
+;  disDecSeg[0]  ; divi[24]   ; 9.709  ; 9.709  ; Rise       ; divi[24]        ;
+;  disDecSeg[1]  ; divi[24]   ; 10.165 ; 10.165 ; Rise       ; divi[24]        ;
+;  disDecSeg[2]  ; divi[24]   ; 8.942  ; 8.942  ; Rise       ; divi[24]        ;
+;  disDecSeg[3]  ; divi[24]   ; 10.127 ; 10.127 ; Rise       ; divi[24]        ;
+;  disDecSeg[4]  ; divi[24]   ; 10.245 ; 10.245 ; Rise       ; divi[24]        ;
+;  disDecSeg[5]  ; divi[24]   ; 9.841  ; 9.841  ; Rise       ; divi[24]        ;
+;  disDecSeg[6]  ; divi[24]   ; 10.244 ; 10.244 ; Rise       ; divi[24]        ;
+; disUniMin[*]   ; divi[24]   ; 9.083  ; 9.083  ; Rise       ; divi[24]        ;
+;  disUniMin[0]  ; divi[24]   ; 9.040  ; 9.040  ; Rise       ; divi[24]        ;
+;  disUniMin[1]  ; divi[24]   ; 9.037  ; 9.037  ; Rise       ; divi[24]        ;
+;  disUniMin[2]  ; divi[24]   ; 9.069  ; 9.069  ; Rise       ; divi[24]        ;
+;  disUniMin[3]  ; divi[24]   ; 8.649  ; 8.649  ; Rise       ; divi[24]        ;
+;  disUniMin[4]  ; divi[24]   ; 8.692  ; 8.692  ; Rise       ; divi[24]        ;
+;  disUniMin[5]  ; divi[24]   ; 9.083  ; 9.083  ; Rise       ; divi[24]        ;
+;  disUniMin[6]  ; divi[24]   ; 8.718  ; 8.718  ; Rise       ; divi[24]        ;
+; disUniSeg[*]   ; divi[24]   ; 9.472  ; 9.472  ; Rise       ; divi[24]        ;
+;  disUniSeg[0]  ; divi[24]   ; 8.540  ; 8.540  ; Rise       ; divi[24]        ;
+;  disUniSeg[1]  ; divi[24]   ; 8.962  ; 8.962  ; Rise       ; divi[24]        ;
+;  disUniSeg[2]  ; divi[24]   ; 8.985  ; 8.985  ; Rise       ; divi[24]        ;
+;  disUniSeg[3]  ; divi[24]   ; 8.972  ; 8.972  ; Rise       ; divi[24]        ;
+;  disUniSeg[4]  ; divi[24]   ; 9.052  ; 9.052  ; Rise       ; divi[24]        ;
+;  disUniSeg[5]  ; divi[24]   ; 9.472  ; 9.472  ; Rise       ; divi[24]        ;
+;  disUniSeg[6]  ; divi[24]   ; 9.444  ; 9.444  ; Rise       ; divi[24]        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; contDecMin[*]  ; divi[24]   ; 7.606 ; 7.606 ; Rise       ; divi[24]        ;
+;  contDecMin[0] ; divi[24]   ; 7.645 ; 7.645 ; Rise       ; divi[24]        ;
+;  contDecMin[1] ; divi[24]   ; 7.606 ; 7.606 ; Rise       ; divi[24]        ;
+;  contDecMin[2] ; divi[24]   ; 8.005 ; 8.005 ; Rise       ; divi[24]        ;
+;  contDecMin[3] ; divi[24]   ; 7.671 ; 7.671 ; Rise       ; divi[24]        ;
+; contDecSeg[*]  ; divi[24]   ; 7.479 ; 7.479 ; Rise       ; divi[24]        ;
+;  contDecSeg[0] ; divi[24]   ; 7.639 ; 7.639 ; Rise       ; divi[24]        ;
+;  contDecSeg[1] ; divi[24]   ; 8.037 ; 8.037 ; Rise       ; divi[24]        ;
+;  contDecSeg[2] ; divi[24]   ; 7.708 ; 7.708 ; Rise       ; divi[24]        ;
+;  contDecSeg[3] ; divi[24]   ; 7.479 ; 7.479 ; Rise       ; divi[24]        ;
+; contUniMin[*]  ; divi[24]   ; 7.109 ; 7.109 ; Rise       ; divi[24]        ;
+;  contUniMin[0] ; divi[24]   ; 7.109 ; 7.109 ; Rise       ; divi[24]        ;
+;  contUniMin[1] ; divi[24]   ; 7.396 ; 7.396 ; Rise       ; divi[24]        ;
+;  contUniMin[2] ; divi[24]   ; 7.636 ; 7.636 ; Rise       ; divi[24]        ;
+;  contUniMin[3] ; divi[24]   ; 8.322 ; 8.322 ; Rise       ; divi[24]        ;
+; contUniSeg[*]  ; divi[24]   ; 7.066 ; 7.066 ; Rise       ; divi[24]        ;
+;  contUniSeg[0] ; divi[24]   ; 7.213 ; 7.213 ; Rise       ; divi[24]        ;
+;  contUniSeg[1] ; divi[24]   ; 7.533 ; 7.533 ; Rise       ; divi[24]        ;
+;  contUniSeg[2] ; divi[24]   ; 7.066 ; 7.066 ; Rise       ; divi[24]        ;
+;  contUniSeg[3] ; divi[24]   ; 8.102 ; 8.102 ; Rise       ; divi[24]        ;
+; disDecMin[*]   ; divi[24]   ; 8.516 ; 8.516 ; Rise       ; divi[24]        ;
+;  disDecMin[0]  ; divi[24]   ; 9.208 ; 9.208 ; Rise       ; divi[24]        ;
+;  disDecMin[1]  ; divi[24]   ; 9.007 ; 9.007 ; Rise       ; divi[24]        ;
+;  disDecMin[2]  ; divi[24]   ; 9.571 ; 9.571 ; Rise       ; divi[24]        ;
+;  disDecMin[3]  ; divi[24]   ; 9.054 ; 9.054 ; Rise       ; divi[24]        ;
+;  disDecMin[4]  ; divi[24]   ; 8.620 ; 8.620 ; Rise       ; divi[24]        ;
+;  disDecMin[5]  ; divi[24]   ; 9.004 ; 9.004 ; Rise       ; divi[24]        ;
+;  disDecMin[6]  ; divi[24]   ; 8.516 ; 8.516 ; Rise       ; divi[24]        ;
+; disDecSeg[*]   ; divi[24]   ; 8.162 ; 8.162 ; Rise       ; divi[24]        ;
+;  disDecSeg[0]  ; divi[24]   ; 8.601 ; 8.601 ; Rise       ; divi[24]        ;
+;  disDecSeg[1]  ; divi[24]   ; 8.494 ; 8.494 ; Rise       ; divi[24]        ;
+;  disDecSeg[2]  ; divi[24]   ; 8.504 ; 8.504 ; Rise       ; divi[24]        ;
+;  disDecSeg[3]  ; divi[24]   ; 8.453 ; 8.453 ; Rise       ; divi[24]        ;
+;  disDecSeg[4]  ; divi[24]   ; 8.567 ; 8.567 ; Rise       ; divi[24]        ;
+;  disDecSeg[5]  ; divi[24]   ; 8.162 ; 8.162 ; Rise       ; divi[24]        ;
+;  disDecSeg[6]  ; divi[24]   ; 8.570 ; 8.570 ; Rise       ; divi[24]        ;
+; disUniMin[*]   ; divi[24]   ; 8.189 ; 8.189 ; Rise       ; divi[24]        ;
+;  disUniMin[0]  ; divi[24]   ; 8.569 ; 8.569 ; Rise       ; divi[24]        ;
+;  disUniMin[1]  ; divi[24]   ; 8.581 ; 8.581 ; Rise       ; divi[24]        ;
+;  disUniMin[2]  ; divi[24]   ; 8.594 ; 8.594 ; Rise       ; divi[24]        ;
+;  disUniMin[3]  ; divi[24]   ; 8.189 ; 8.189 ; Rise       ; divi[24]        ;
+;  disUniMin[4]  ; divi[24]   ; 8.232 ; 8.232 ; Rise       ; divi[24]        ;
+;  disUniMin[5]  ; divi[24]   ; 8.627 ; 8.627 ; Rise       ; divi[24]        ;
+;  disUniMin[6]  ; divi[24]   ; 8.261 ; 8.261 ; Rise       ; divi[24]        ;
+; disUniSeg[*]   ; divi[24]   ; 8.071 ; 8.071 ; Rise       ; divi[24]        ;
+;  disUniSeg[0]  ; divi[24]   ; 8.071 ; 8.071 ; Rise       ; divi[24]        ;
+;  disUniSeg[1]  ; divi[24]   ; 8.493 ; 8.493 ; Rise       ; divi[24]        ;
+;  disUniSeg[2]  ; divi[24]   ; 8.516 ; 8.516 ; Rise       ; divi[24]        ;
+;  disUniSeg[3]  ; divi[24]   ; 8.504 ; 8.504 ; Rise       ; divi[24]        ;
+;  disUniSeg[4]  ; divi[24]   ; 8.583 ; 8.583 ; Rise       ; divi[24]        ;
+;  disUniSeg[5]  ; divi[24]   ; 9.003 ; 9.003 ; Rise       ; divi[24]        ;
+;  disUniSeg[6]  ; divi[24]   ; 8.976 ; 8.976 ; Rise       ; divi[24]        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------+
+; Fast Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; reloj    ; -0.660 ; -5.388        ;
+; divi[24] ; -0.293 ; -1.944        ;
++----------+--------+---------------+
+
+
++-----------------------------------+
+; Fast Model Hold Summary           ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; reloj    ; -1.318 ; -1.318        ;
+; divi[24] ; 0.215  ; 0.000         ;
++----------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; reloj    ; -1.380 ; -26.380            ;
+; divi[24] ; -0.500 ; -16.000            ;
++----------+--------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'reloj'                                                                           ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; -0.660 ; divi[1]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.678      ;
+; -0.625 ; divi[1]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.643      ;
+; -0.590 ; divi[1]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.608      ;
+; -0.569 ; divi[0]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.587      ;
+; -0.555 ; divi[1]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.573      ;
+; -0.546 ; divi[2]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.564      ;
+; -0.534 ; divi[0]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.552      ;
+; -0.511 ; divi[3]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.529      ;
+; -0.511 ; divi[2]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.529      ;
+; -0.499 ; divi[0]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.517      ;
+; -0.476 ; divi[3]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.494      ;
+; -0.476 ; divi[2]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.494      ;
+; -0.464 ; divi[0]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.482      ;
+; -0.461 ; divi[1]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.479      ;
+; -0.459 ; divi[4]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.477      ;
+; -0.441 ; divi[3]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.459      ;
+; -0.441 ; divi[2]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.459      ;
+; -0.426 ; divi[1]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.444      ;
+; -0.424 ; divi[4]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.442      ;
+; -0.406 ; divi[3]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.424      ;
+; -0.391 ; divi[1]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.409      ;
+; -0.389 ; divi[4]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.407      ;
+; -0.384 ; divi[5]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.402      ;
+; -0.370 ; divi[0]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.388      ;
+; -0.356 ; divi[1]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.374      ;
+; -0.354 ; divi[4]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.372      ;
+; -0.349 ; divi[5]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.367      ;
+; -0.347 ; divi[2]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.365      ;
+; -0.335 ; divi[0]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.353      ;
+; -0.334 ; divi[6]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.352      ;
+; -0.321 ; divi[1]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.339      ;
+; -0.314 ; divi[7]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.332      ;
+; -0.314 ; divi[5]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.332      ;
+; -0.312 ; divi[3]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.330      ;
+; -0.312 ; divi[2]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.330      ;
+; -0.300 ; divi[0]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.318      ;
+; -0.299 ; divi[6]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.317      ;
+; -0.286 ; divi[1]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.304      ;
+; -0.279 ; divi[7]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.297      ;
+; -0.279 ; divi[5]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.297      ;
+; -0.277 ; divi[3]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.295      ;
+; -0.277 ; divi[2]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.295      ;
+; -0.265 ; divi[0]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.283      ;
+; -0.264 ; divi[8]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.282      ;
+; -0.264 ; divi[6]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.282      ;
+; -0.260 ; divi[4]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.278      ;
+; -0.251 ; divi[1]   ; divi[14] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.269      ;
+; -0.245 ; divi[9]   ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.263      ;
+; -0.244 ; divi[7]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.262      ;
+; -0.242 ; divi[3]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.260      ;
+; -0.242 ; divi[2]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.260      ;
+; -0.230 ; divi[0]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.248      ;
+; -0.229 ; divi[8]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.247      ;
+; -0.229 ; divi[6]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.247      ;
+; -0.225 ; divi[4]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.243      ;
+; -0.216 ; divi[1]   ; divi[13] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.234      ;
+; -0.210 ; divi[9]   ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.228      ;
+; -0.209 ; divi[7]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.227      ;
+; -0.207 ; divi[3]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.225      ;
+; -0.207 ; divi[2]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.225      ;
+; -0.197 ; divi[10]  ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.215      ;
+; -0.195 ; divi[0]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.213      ;
+; -0.194 ; divi[8]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.212      ;
+; -0.190 ; divi[4]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.208      ;
+; -0.185 ; divi[5]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.203      ;
+; -0.175 ; divi[9]   ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.193      ;
+; -0.172 ; divi[3]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.190      ;
+; -0.172 ; divi[2]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.190      ;
+; -0.162 ; divi[11]  ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.180      ;
+; -0.162 ; divi[10]  ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.180      ;
+; -0.160 ; divi[0]   ; divi[14] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.178      ;
+; -0.159 ; divi[8]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.177      ;
+; -0.155 ; divi[4]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.173      ;
+; -0.150 ; divi[5]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.168      ;
+; -0.140 ; divi[9]   ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.158      ;
+; -0.137 ; divi[3]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.155      ;
+; -0.137 ; divi[2]   ; divi[14] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.155      ;
+; -0.135 ; divi[6]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.153      ;
+; -0.127 ; divi[11]  ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.145      ;
+; -0.127 ; divi[10]  ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.145      ;
+; -0.125 ; divi[0]   ; divi[13] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.143      ;
+; -0.122 ; divi[12]  ; divi[24] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.140      ;
+; -0.120 ; divi[4]   ; divi[16] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.138      ;
+; -0.115 ; divi[1]   ; divi[12] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.147      ;
+; -0.115 ; divi[7]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.133      ;
+; -0.115 ; divi[5]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.133      ;
+; -0.102 ; divi[3]   ; divi[14] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.120      ;
+; -0.102 ; divi[2]   ; divi[13] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.120      ;
+; -0.100 ; divi[6]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.118      ;
+; -0.092 ; divi[11]  ; divi[22] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.110      ;
+; -0.092 ; divi[10]  ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.110      ;
+; -0.087 ; divi[12]  ; divi[23] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.105      ;
+; -0.085 ; divi[4]   ; divi[15] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.103      ;
+; -0.080 ; divi[1]   ; divi[11] ; reloj        ; reloj       ; 1.000        ; 0.000      ; 1.112      ;
+; -0.080 ; divi[7]   ; divi[19] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.098      ;
+; -0.080 ; divi[5]   ; divi[17] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.098      ;
+; -0.067 ; divi[3]   ; divi[13] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.085      ;
+; -0.065 ; divi[8]   ; divi[20] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.083      ;
+; -0.065 ; divi[6]   ; divi[18] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.083      ;
+; -0.057 ; divi[11]  ; divi[21] ; reloj        ; reloj       ; 1.000        ; -0.014     ; 1.075      ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'divi[24]'                                                                                           ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; -0.293 ; contUniSeg[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.323      ;
+; -0.291 ; contUniSeg[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.321      ;
+; -0.288 ; contUniSeg[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.318      ;
+; -0.276 ; contDecSeg[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.306      ;
+; -0.275 ; contDecSeg[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.305      ;
+; -0.274 ; contDecSeg[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.304      ;
+; -0.273 ; contDecSeg[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.303      ;
+; -0.272 ; contDecSeg[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.302      ;
+; -0.270 ; contDecSeg[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.300      ;
+; -0.257 ; contUniSeg[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.288      ;
+; -0.229 ; contUniSeg[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.259      ;
+; -0.227 ; contUniSeg[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.257      ;
+; -0.224 ; contUniSeg[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.254      ;
+; -0.224 ; contDecSeg[2]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.255      ;
+; -0.222 ; contDecSeg[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.253      ;
+; -0.207 ; contDecSeg[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.237      ;
+; -0.206 ; contDecSeg[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.236      ;
+; -0.203 ; contDecSeg[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.233      ;
+; -0.193 ; contUniSeg[2]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.224      ;
+; -0.180 ; contDecSeg[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.210      ;
+; -0.179 ; contDecSeg[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.209      ;
+; -0.176 ; contDecSeg[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.206      ;
+; -0.171 ; contUniSeg[1]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.202      ;
+; -0.171 ; contUniSeg[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.202      ;
+; -0.163 ; contUniSeg[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.193      ;
+; -0.161 ; contUniSeg[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.191      ;
+; -0.158 ; contUniSeg[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.188      ;
+; -0.155 ; contDecSeg[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.186      ;
+; -0.152 ; contDecSeg[2]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.182      ;
+; -0.150 ; contDecSeg[3]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.180      ;
+; -0.144 ; contUniMin[2]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.176      ;
+; -0.138 ; contUniMin[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.169      ;
+; -0.137 ; contUniMin[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.168      ;
+; -0.134 ; contUniMin[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.165      ;
+; -0.132 ; contUniSeg[1]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.162      ;
+; -0.128 ; contDecSeg[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.159      ;
+; -0.128 ; contDecSeg[2]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.159      ;
+; -0.128 ; contDecSeg[2]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.159      ;
+; -0.127 ; contUniSeg[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.158      ;
+; -0.126 ; contDecSeg[3]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.157      ;
+; -0.126 ; contDecSeg[3]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.157      ;
+; -0.120 ; contUniMin[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.152      ;
+; -0.114 ; contUniMin[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.145      ;
+; -0.113 ; contUniSeg[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.143      ;
+; -0.113 ; contUniMin[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.144      ;
+; -0.111 ; contUniSeg[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.141      ;
+; -0.110 ; contUniMin[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.141      ;
+; -0.108 ; contUniSeg[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.138      ;
+; -0.107 ; contUniSeg[2]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.138      ;
+; -0.107 ; contUniSeg[2]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.138      ;
+; -0.087 ; contUniSeg[1]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.119      ;
+; -0.086 ; contUniSeg[1]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.118      ;
+; -0.085 ; contUniSeg[1]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.117      ;
+; -0.083 ; contDecSeg[1]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.113      ;
+; -0.077 ; contUniSeg[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.108      ;
+; -0.068 ; contUniSeg[2]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.098      ;
+; -0.063 ; contUniSeg[1]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.095      ;
+; -0.059 ; contDecSeg[1]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.090      ;
+; -0.059 ; contDecSeg[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.090      ;
+; -0.056 ; contDecSeg[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.086      ;
+; -0.056 ; contUniMin[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.088      ;
+; -0.050 ; contUniMin[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.081      ;
+; -0.049 ; contUniMin[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.080      ;
+; -0.046 ; contUniMin[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.077      ;
+; -0.041 ; contUniSeg[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.072      ;
+; -0.041 ; contUniSeg[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.072      ;
+; -0.032 ; contDecSeg[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.063      ;
+; -0.032 ; contDecSeg[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.063      ;
+; -0.031 ; contUniMin[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.063      ;
+; -0.025 ; contUniMin[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.056      ;
+; -0.024 ; contUniMin[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.055      ;
+; -0.023 ; contUniSeg[2]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.055      ;
+; -0.022 ; contUniSeg[2]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.054      ;
+; -0.021 ; contUniMin[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.052      ;
+; -0.021 ; contUniSeg[2]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.053      ;
+; -0.014 ; contUniMin[2]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.045      ;
+; -0.009 ; contUniMin[2]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.041      ;
+; -0.007 ; contUniMin[2]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.039      ;
+; -0.002 ; contUniSeg[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 1.032      ;
+; 0.001  ; contUniSeg[2]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.031      ;
+; 0.005  ; contDecMin[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.027      ;
+; 0.007  ; contDecMin[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.025      ;
+; 0.009  ; contUniSeg[3]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.022      ;
+; 0.009  ; contUniSeg[3]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.022      ;
+; 0.010  ; contDecMin[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.022      ;
+; 0.010  ; contUniMin[1]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.021      ;
+; 0.015  ; contUniMin[1]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.017      ;
+; 0.017  ; contUniMin[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.015      ;
+; 0.019  ; contDecSeg[2]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.012      ;
+; 0.021  ; contDecSeg[3]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.001     ; 1.010      ;
+; 0.023  ; contDecMin[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.009      ;
+; 0.025  ; contDecMin[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.007      ;
+; 0.028  ; contDecMin[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 1.004      ;
+; 0.043  ; contUniSeg[0]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 0.989      ;
+; 0.044  ; contUniSeg[0]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 0.988      ;
+; 0.045  ; contUniSeg[0]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 0.987      ;
+; 0.045  ; contDecSeg[2]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 0.987      ;
+; 0.047  ; contDecSeg[2]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 0.985      ;
+; 0.047  ; contDecSeg[3]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; 0.000      ; 0.985      ;
+; 0.048  ; contUniSeg[3]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 1.000        ; -0.002     ; 0.982      ;
++--------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'reloj'                                                                            ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+; -1.318 ; divi[24]  ; divi[24] ; divi[24]     ; reloj       ; 0.000        ; 1.420      ; 0.395      ;
+; -0.818 ; divi[24]  ; divi[24] ; divi[24]     ; reloj       ; -0.500       ; 1.420      ; 0.395      ;
+; 0.215  ; divi[0]   ; divi[0]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.353  ; divi[13]  ; divi[13] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.505      ;
+; 0.356  ; divi[4]   ; divi[4]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356  ; divi[6]   ; divi[6]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356  ; divi[8]   ; divi[8]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357  ; divi[14]  ; divi[14] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358  ; divi[15]  ; divi[15] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; divi[22]  ; divi[22] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359  ; divi[10]  ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; divi[11]  ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; divi[12]  ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; divi[17]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359  ; divi[20]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360  ; divi[0]   ; divi[1]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.367  ; divi[2]   ; divi[2]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; divi[3]   ; divi[3]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; divi[21]  ; divi[21] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; divi[23]  ; divi[23] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.519      ;
+; 0.369  ; divi[5]   ; divi[5]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369  ; divi[7]   ; divi[7]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369  ; divi[16]  ; divi[16] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370  ; divi[9]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370  ; divi[18]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370  ; divi[19]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.522      ;
+; 0.446  ; divi[1]   ; divi[1]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.598      ;
+; 0.491  ; divi[13]  ; divi[14] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.643      ;
+; 0.494  ; divi[6]   ; divi[7]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.646      ;
+; 0.494  ; divi[8]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.646      ;
+; 0.495  ; divi[14]  ; divi[15] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.647      ;
+; 0.495  ; divi[0]   ; divi[2]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496  ; divi[22]  ; divi[23] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496  ; divi[15]  ; divi[16] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497  ; divi[10]  ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497  ; divi[11]  ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.497  ; divi[17]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.507  ; divi[23]  ; divi[24] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507  ; divi[3]   ; divi[4]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507  ; divi[21]  ; divi[22] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507  ; divi[2]   ; divi[3]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.659      ;
+; 0.509  ; divi[5]   ; divi[6]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509  ; divi[7]   ; divi[8]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509  ; divi[16]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.661      ;
+; 0.510  ; divi[9]   ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510  ; divi[19]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510  ; divi[18]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.662      ;
+; 0.526  ; divi[13]  ; divi[15] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.678      ;
+; 0.529  ; divi[6]   ; divi[8]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.681      ;
+; 0.529  ; divi[8]   ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.681      ;
+; 0.530  ; divi[14]  ; divi[16] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.682      ;
+; 0.530  ; divi[0]   ; divi[3]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531  ; divi[22]  ; divi[24] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531  ; divi[15]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532  ; divi[10]  ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.684      ;
+; 0.532  ; divi[17]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.684      ;
+; 0.542  ; divi[21]  ; divi[23] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.694      ;
+; 0.542  ; divi[2]   ; divi[4]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.694      ;
+; 0.544  ; divi[5]   ; divi[7]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544  ; divi[7]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.696      ;
+; 0.544  ; divi[16]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545  ; divi[9]   ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.697      ;
+; 0.545  ; divi[18]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.697      ;
+; 0.549  ; divi[4]   ; divi[5]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.701      ;
+; 0.552  ; divi[20]  ; divi[21] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.704      ;
+; 0.558  ; divi[12]  ; divi[13] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 0.696      ;
+; 0.561  ; divi[13]  ; divi[16] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.713      ;
+; 0.564  ; divi[6]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.716      ;
+; 0.564  ; divi[8]   ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.716      ;
+; 0.565  ; divi[14]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.717      ;
+; 0.565  ; divi[0]   ; divi[4]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.717      ;
+; 0.566  ; divi[15]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567  ; divi[17]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.719      ;
+; 0.577  ; divi[21]  ; divi[24] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.729      ;
+; 0.579  ; divi[5]   ; divi[8]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579  ; divi[7]   ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.579  ; divi[16]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580  ; divi[9]   ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.584  ; divi[4]   ; divi[6]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.736      ;
+; 0.586  ; divi[1]   ; divi[2]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.738      ;
+; 0.587  ; divi[20]  ; divi[22] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.739      ;
+; 0.593  ; divi[12]  ; divi[14] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 0.731      ;
+; 0.596  ; divi[13]  ; divi[17] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.748      ;
+; 0.598  ; divi[11]  ; divi[13] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 0.736      ;
+; 0.599  ; divi[6]   ; divi[10] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.751      ;
+; 0.599  ; divi[8]   ; divi[12] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.751      ;
+; 0.600  ; divi[14]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.752      ;
+; 0.601  ; divi[3]   ; divi[5]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.753      ;
+; 0.601  ; divi[15]  ; divi[19] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.753      ;
+; 0.604  ; divi[19]  ; divi[21] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.756      ;
+; 0.614  ; divi[5]   ; divi[9]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.766      ;
+; 0.614  ; divi[7]   ; divi[11] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.766      ;
+; 0.614  ; divi[16]  ; divi[20] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.766      ;
+; 0.619  ; divi[4]   ; divi[7]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.771      ;
+; 0.621  ; divi[1]   ; divi[3]  ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.773      ;
+; 0.622  ; divi[20]  ; divi[23] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.774      ;
+; 0.628  ; divi[12]  ; divi[15] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 0.766      ;
+; 0.631  ; divi[13]  ; divi[18] ; reloj        ; reloj       ; 0.000        ; 0.000      ; 0.783      ;
+; 0.633  ; divi[11]  ; divi[14] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 0.771      ;
+; 0.633  ; divi[10]  ; divi[13] ; reloj        ; reloj       ; 0.000        ; -0.014     ; 0.771      ;
++--------+-----------+----------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'divi[24]'                                                                                           ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; contUniSeg[0]~reg0 ; contUniSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contUniSeg[1]~reg0 ; contUniSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contDecSeg[0]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contDecSeg[1]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contDecSeg[2]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contDecSeg[3]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contUniMin[0]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contUniMin[2]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contUniMin[3]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contUniMin[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contDecMin[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contDecMin[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contDecMin[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; contDecMin[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.370 ; contDecSeg[0]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.522      ;
+; 0.388 ; contUniSeg[0]~reg0 ; contUniSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.540      ;
+; 0.394 ; contUniMin[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.546      ;
+; 0.406 ; contDecMin[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.558      ;
+; 0.442 ; contUniSeg[1]~reg0 ; contUniSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.594      ;
+; 0.461 ; contUniSeg[1]~reg0 ; contUniSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.613      ;
+; 0.481 ; contUniSeg[0]~reg0 ; contUniSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.633      ;
+; 0.501 ; contUniSeg[0]~reg0 ; contUniSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.653      ;
+; 0.511 ; contUniSeg[3]~reg0 ; contUniSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.663      ;
+; 0.528 ; contUniSeg[3]~reg0 ; contUniSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.680      ;
+; 0.529 ; contUniSeg[3]~reg0 ; contUniSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.681      ;
+; 0.547 ; contUniSeg[2]~reg0 ; contUniSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.699      ;
+; 0.570 ; contUniSeg[2]~reg0 ; contUniSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.722      ;
+; 0.578 ; contUniMin[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.730      ;
+; 0.588 ; contDecMin[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.740      ;
+; 0.593 ; contDecMin[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.745      ;
+; 0.602 ; contUniMin[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.754      ;
+; 0.627 ; contUniSeg[2]~reg0 ; contUniSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.779      ;
+; 0.633 ; contUniMin[2]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.648 ; contUniSeg[3]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.799      ;
+; 0.654 ; contDecMin[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.806      ;
+; 0.660 ; contDecMin[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.812      ;
+; 0.668 ; contDecSeg[1]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.820      ;
+; 0.676 ; contUniSeg[3]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.828      ;
+; 0.679 ; contUniSeg[3]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.831      ;
+; 0.681 ; contUniSeg[3]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.833      ;
+; 0.698 ; contUniSeg[0]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.849      ;
+; 0.710 ; contUniMin[1]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.862      ;
+; 0.721 ; contDecMin[2]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.873      ;
+; 0.726 ; contUniSeg[0]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.878      ;
+; 0.729 ; contUniSeg[0]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.881      ;
+; 0.731 ; contUniSeg[0]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.883      ;
+; 0.732 ; contDecSeg[2]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.884      ;
+; 0.734 ; contDecSeg[0]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.886      ;
+; 0.739 ; contDecSeg[0]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.891      ;
+; 0.751 ; contUniSeg[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.902      ;
+; 0.751 ; contUniMin[1]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.903      ;
+; 0.762 ; contDecSeg[1]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.914      ;
+; 0.763 ; contUniSeg[3]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.915      ;
+; 0.764 ; contUniSeg[2]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.915      ;
+; 0.765 ; contDecSeg[0]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.916      ;
+; 0.771 ; contUniMin[0]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.922      ;
+; 0.774 ; contUniMin[0]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.925      ;
+; 0.776 ; contUniMin[0]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.927      ;
+; 0.781 ; contUniMin[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.932      ;
+; 0.792 ; contUniSeg[2]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.944      ;
+; 0.792 ; contDecSeg[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.943      ;
+; 0.792 ; contDecSeg[1]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.943      ;
+; 0.795 ; contUniSeg[2]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.947      ;
+; 0.796 ; contUniMin[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.947      ;
+; 0.797 ; contUniSeg[2]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.949      ;
+; 0.799 ; contUniMin[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.950      ;
+; 0.801 ; contUniSeg[0]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.952      ;
+; 0.801 ; contUniMin[3]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.953      ;
+; 0.801 ; contUniMin[3]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.952      ;
+; 0.806 ; contUniMin[3]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.957      ;
+; 0.813 ; contUniSeg[0]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.965      ;
+; 0.819 ; contDecSeg[1]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.970      ;
+; 0.820 ; contUniSeg[3]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.971      ;
+; 0.822 ; contUniSeg[3]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.973      ;
+; 0.828 ; contUniSeg[1]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 0.979      ;
+; 0.831 ; contDecSeg[3]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.983      ;
+; 0.832 ; contUniSeg[3]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 0.982      ;
+; 0.833 ; contDecSeg[2]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.985      ;
+; 0.833 ; contDecSeg[3]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 0.985      ;
+; 0.852 ; contDecMin[3]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.004      ;
+; 0.855 ; contDecMin[3]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.007      ;
+; 0.856 ; contUniSeg[1]~reg0 ; contDecSeg[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.008      ;
+; 0.859 ; contUniSeg[1]~reg0 ; contDecSeg[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.011      ;
+; 0.859 ; contDecSeg[3]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.010      ;
+; 0.860 ; contUniMin[1]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.011      ;
+; 0.861 ; contUniSeg[1]~reg0 ; contDecSeg[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.013      ;
+; 0.861 ; contDecSeg[2]~reg0 ; contUniMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.012      ;
+; 0.863 ; contUniMin[1]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.014      ;
+; 0.865 ; contUniMin[1]~reg0 ; contDecMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.016      ;
+; 0.867 ; contUniSeg[2]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.018      ;
+; 0.870 ; contUniMin[1]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.021      ;
+; 0.870 ; contUniSeg[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.021      ;
+; 0.871 ; contDecSeg[0]~reg0 ; contUniMin[3]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.022      ;
+; 0.872 ; contUniSeg[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.023      ;
+; 0.873 ; contDecMin[2]~reg0 ; contDecMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.025      ;
+; 0.873 ; contDecSeg[0]~reg0 ; contUniMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.024      ;
+; 0.879 ; contUniSeg[2]~reg0 ; contDecSeg[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; 0.000      ; 1.031      ;
+; 0.882 ; contUniSeg[0]~reg0 ; contDecMin[0]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.002     ; 1.032      ;
+; 0.884 ; contUniMin[2]~reg0 ; contDecMin[2]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.035      ;
+; 0.886 ; contDecSeg[3]~reg0 ; contUniMin[1]~reg0 ; divi[24]     ; divi[24]    ; 0.000        ; -0.001     ; 1.037      ;
++-------+--------------------+--------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'reloj'                                                       ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target       ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; reloj ; Rise       ; reloj        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[24]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; reloj ; Rise       ; divi[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[9]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[16]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[16]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[17]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[17]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[18]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[18]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[19]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[19]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[1]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[1]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[20]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[20]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[21]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[21]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[22]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[22]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[23]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[23]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[24]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[24]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[2]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[2]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[3]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[3]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[4]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[4]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[5]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[5]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[6]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[6]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[7]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[7]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[8]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; reloj ; Rise       ; divi[8]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; reloj ; Rise       ; divi[9]|clk  ;
++--------+--------------+----------------+------------------+-------+------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'divi[24]'                                                                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[0]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[1]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[2]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[3]~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[3]~reg0        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecMin[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecMin[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contDecSeg[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contDecSeg[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniMin[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniMin[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[0]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[1]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[2]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; contUniSeg[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; contUniSeg[3]~reg0|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; divi[24]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; divi[24]|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; divi[24]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; divi[24]~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; divi[24] ; Rise       ; divi[24]~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; divi[24] ; Rise       ; divi[24]~clkctrl|outclk   ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rst       ; divi[24]   ; 3.171 ; 3.171 ; Rise       ; divi[24]        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst       ; divi[24]   ; -2.742 ; -2.742 ; Rise       ; divi[24]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; contDecMin[*]  ; divi[24]   ; 3.541 ; 3.541 ; Rise       ; divi[24]        ;
+;  contDecMin[0] ; divi[24]   ; 3.439 ; 3.439 ; Rise       ; divi[24]        ;
+;  contDecMin[1] ; divi[24]   ; 3.411 ; 3.411 ; Rise       ; divi[24]        ;
+;  contDecMin[2] ; divi[24]   ; 3.541 ; 3.541 ; Rise       ; divi[24]        ;
+;  contDecMin[3] ; divi[24]   ; 3.449 ; 3.449 ; Rise       ; divi[24]        ;
+; contDecSeg[*]  ; divi[24]   ; 3.565 ; 3.565 ; Rise       ; divi[24]        ;
+;  contDecSeg[0] ; divi[24]   ; 3.430 ; 3.430 ; Rise       ; divi[24]        ;
+;  contDecSeg[1] ; divi[24]   ; 3.565 ; 3.565 ; Rise       ; divi[24]        ;
+;  contDecSeg[2] ; divi[24]   ; 3.472 ; 3.472 ; Rise       ; divi[24]        ;
+;  contDecSeg[3] ; divi[24]   ; 3.288 ; 3.288 ; Rise       ; divi[24]        ;
+; contUniMin[*]  ; divi[24]   ; 3.628 ; 3.628 ; Rise       ; divi[24]        ;
+;  contUniMin[0] ; divi[24]   ; 3.182 ; 3.182 ; Rise       ; divi[24]        ;
+;  contUniMin[1] ; divi[24]   ; 3.329 ; 3.329 ; Rise       ; divi[24]        ;
+;  contUniMin[2] ; divi[24]   ; 3.434 ; 3.434 ; Rise       ; divi[24]        ;
+;  contUniMin[3] ; divi[24]   ; 3.628 ; 3.628 ; Rise       ; divi[24]        ;
+; contUniSeg[*]  ; divi[24]   ; 3.579 ; 3.579 ; Rise       ; divi[24]        ;
+;  contUniSeg[0] ; divi[24]   ; 3.286 ; 3.286 ; Rise       ; divi[24]        ;
+;  contUniSeg[1] ; divi[24]   ; 3.316 ; 3.316 ; Rise       ; divi[24]        ;
+;  contUniSeg[2] ; divi[24]   ; 3.158 ; 3.158 ; Rise       ; divi[24]        ;
+;  contUniSeg[3] ; divi[24]   ; 3.579 ; 3.579 ; Rise       ; divi[24]        ;
+; disDecMin[*]   ; divi[24]   ; 4.252 ; 4.252 ; Rise       ; divi[24]        ;
+;  disDecMin[0]  ; divi[24]   ; 3.993 ; 3.993 ; Rise       ; divi[24]        ;
+;  disDecMin[1]  ; divi[24]   ; 3.992 ; 3.992 ; Rise       ; divi[24]        ;
+;  disDecMin[2]  ; divi[24]   ; 4.252 ; 4.252 ; Rise       ; divi[24]        ;
+;  disDecMin[3]  ; divi[24]   ; 4.018 ; 4.018 ; Rise       ; divi[24]        ;
+;  disDecMin[4]  ; divi[24]   ; 3.858 ; 3.858 ; Rise       ; divi[24]        ;
+;  disDecMin[5]  ; divi[24]   ; 3.987 ; 3.987 ; Rise       ; divi[24]        ;
+;  disDecMin[6]  ; divi[24]   ; 3.880 ; 3.880 ; Rise       ; divi[24]        ;
+; disDecSeg[*]   ; divi[24]   ; 4.211 ; 4.211 ; Rise       ; divi[24]        ;
+;  disDecSeg[0]  ; divi[24]   ; 4.009 ; 4.009 ; Rise       ; divi[24]        ;
+;  disDecSeg[1]  ; divi[24]   ; 4.131 ; 4.131 ; Rise       ; divi[24]        ;
+;  disDecSeg[2]  ; divi[24]   ; 3.741 ; 3.741 ; Rise       ; divi[24]        ;
+;  disDecSeg[3]  ; divi[24]   ; 4.108 ; 4.108 ; Rise       ; divi[24]        ;
+;  disDecSeg[4]  ; divi[24]   ; 4.211 ; 4.211 ; Rise       ; divi[24]        ;
+;  disDecSeg[5]  ; divi[24]   ; 4.086 ; 4.086 ; Rise       ; divi[24]        ;
+;  disDecSeg[6]  ; divi[24]   ; 4.210 ; 4.210 ; Rise       ; divi[24]        ;
+; disUniMin[*]   ; divi[24]   ; 3.846 ; 3.846 ; Rise       ; divi[24]        ;
+;  disUniMin[0]  ; divi[24]   ; 3.789 ; 3.789 ; Rise       ; divi[24]        ;
+;  disUniMin[1]  ; divi[24]   ; 3.775 ; 3.775 ; Rise       ; divi[24]        ;
+;  disUniMin[2]  ; divi[24]   ; 3.800 ; 3.800 ; Rise       ; divi[24]        ;
+;  disUniMin[3]  ; divi[24]   ; 3.652 ; 3.652 ; Rise       ; divi[24]        ;
+;  disUniMin[4]  ; divi[24]   ; 3.726 ; 3.726 ; Rise       ; divi[24]        ;
+;  disUniMin[5]  ; divi[24]   ; 3.846 ; 3.846 ; Rise       ; divi[24]        ;
+;  disUniMin[6]  ; divi[24]   ; 3.739 ; 3.739 ; Rise       ; divi[24]        ;
+; disUniSeg[*]   ; divi[24]   ; 3.980 ; 3.980 ; Rise       ; divi[24]        ;
+;  disUniSeg[0]  ; divi[24]   ; 3.604 ; 3.604 ; Rise       ; divi[24]        ;
+;  disUniSeg[1]  ; divi[24]   ; 3.758 ; 3.758 ; Rise       ; divi[24]        ;
+;  disUniSeg[2]  ; divi[24]   ; 3.769 ; 3.769 ; Rise       ; divi[24]        ;
+;  disUniSeg[3]  ; divi[24]   ; 3.759 ; 3.759 ; Rise       ; divi[24]        ;
+;  disUniSeg[4]  ; divi[24]   ; 3.851 ; 3.851 ; Rise       ; divi[24]        ;
+;  disUniSeg[5]  ; divi[24]   ; 3.980 ; 3.980 ; Rise       ; divi[24]        ;
+;  disUniSeg[6]  ; divi[24]   ; 3.962 ; 3.962 ; Rise       ; divi[24]        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; contDecMin[*]  ; divi[24]   ; 3.411 ; 3.411 ; Rise       ; divi[24]        ;
+;  contDecMin[0] ; divi[24]   ; 3.439 ; 3.439 ; Rise       ; divi[24]        ;
+;  contDecMin[1] ; divi[24]   ; 3.411 ; 3.411 ; Rise       ; divi[24]        ;
+;  contDecMin[2] ; divi[24]   ; 3.541 ; 3.541 ; Rise       ; divi[24]        ;
+;  contDecMin[3] ; divi[24]   ; 3.449 ; 3.449 ; Rise       ; divi[24]        ;
+; contDecSeg[*]  ; divi[24]   ; 3.288 ; 3.288 ; Rise       ; divi[24]        ;
+;  contDecSeg[0] ; divi[24]   ; 3.430 ; 3.430 ; Rise       ; divi[24]        ;
+;  contDecSeg[1] ; divi[24]   ; 3.565 ; 3.565 ; Rise       ; divi[24]        ;
+;  contDecSeg[2] ; divi[24]   ; 3.472 ; 3.472 ; Rise       ; divi[24]        ;
+;  contDecSeg[3] ; divi[24]   ; 3.288 ; 3.288 ; Rise       ; divi[24]        ;
+; contUniMin[*]  ; divi[24]   ; 3.182 ; 3.182 ; Rise       ; divi[24]        ;
+;  contUniMin[0] ; divi[24]   ; 3.182 ; 3.182 ; Rise       ; divi[24]        ;
+;  contUniMin[1] ; divi[24]   ; 3.329 ; 3.329 ; Rise       ; divi[24]        ;
+;  contUniMin[2] ; divi[24]   ; 3.434 ; 3.434 ; Rise       ; divi[24]        ;
+;  contUniMin[3] ; divi[24]   ; 3.628 ; 3.628 ; Rise       ; divi[24]        ;
+; contUniSeg[*]  ; divi[24]   ; 3.158 ; 3.158 ; Rise       ; divi[24]        ;
+;  contUniSeg[0] ; divi[24]   ; 3.286 ; 3.286 ; Rise       ; divi[24]        ;
+;  contUniSeg[1] ; divi[24]   ; 3.316 ; 3.316 ; Rise       ; divi[24]        ;
+;  contUniSeg[2] ; divi[24]   ; 3.158 ; 3.158 ; Rise       ; divi[24]        ;
+;  contUniSeg[3] ; divi[24]   ; 3.579 ; 3.579 ; Rise       ; divi[24]        ;
+; disDecMin[*]   ; divi[24]   ; 3.721 ; 3.721 ; Rise       ; divi[24]        ;
+;  disDecMin[0]  ; divi[24]   ; 3.928 ; 3.928 ; Rise       ; divi[24]        ;
+;  disDecMin[1]  ; divi[24]   ; 3.857 ; 3.857 ; Rise       ; divi[24]        ;
+;  disDecMin[2]  ; divi[24]   ; 3.993 ; 3.993 ; Rise       ; divi[24]        ;
+;  disDecMin[3]  ; divi[24]   ; 3.881 ; 3.881 ; Rise       ; divi[24]        ;
+;  disDecMin[4]  ; divi[24]   ; 3.721 ; 3.721 ; Rise       ; divi[24]        ;
+;  disDecMin[5]  ; divi[24]   ; 3.848 ; 3.848 ; Rise       ; divi[24]        ;
+;  disDecMin[6]  ; divi[24]   ; 3.743 ; 3.743 ; Rise       ; divi[24]        ;
+; disDecSeg[*]   ; divi[24]   ; 3.570 ; 3.570 ; Rise       ; divi[24]        ;
+;  disDecSeg[0]  ; divi[24]   ; 3.660 ; 3.660 ; Rise       ; divi[24]        ;
+;  disDecSeg[1]  ; divi[24]   ; 3.624 ; 3.624 ; Rise       ; divi[24]        ;
+;  disDecSeg[2]  ; divi[24]   ; 3.629 ; 3.629 ; Rise       ; divi[24]        ;
+;  disDecSeg[3]  ; divi[24]   ; 3.597 ; 3.597 ; Rise       ; divi[24]        ;
+;  disDecSeg[4]  ; divi[24]   ; 3.696 ; 3.696 ; Rise       ; divi[24]        ;
+;  disDecSeg[5]  ; divi[24]   ; 3.570 ; 3.570 ; Rise       ; divi[24]        ;
+;  disDecSeg[6]  ; divi[24]   ; 3.699 ; 3.699 ; Rise       ; divi[24]        ;
+; disUniMin[*]   ; divi[24]   ; 3.531 ; 3.531 ; Rise       ; divi[24]        ;
+;  disUniMin[0]  ; divi[24]   ; 3.656 ; 3.656 ; Rise       ; divi[24]        ;
+;  disUniMin[1]  ; divi[24]   ; 3.657 ; 3.657 ; Rise       ; divi[24]        ;
+;  disUniMin[2]  ; divi[24]   ; 3.665 ; 3.665 ; Rise       ; divi[24]        ;
+;  disUniMin[3]  ; divi[24]   ; 3.531 ; 3.531 ; Rise       ; divi[24]        ;
+;  disUniMin[4]  ; divi[24]   ; 3.605 ; 3.605 ; Rise       ; divi[24]        ;
+;  disUniMin[5]  ; divi[24]   ; 3.728 ; 3.728 ; Rise       ; divi[24]        ;
+;  disUniMin[6]  ; divi[24]   ; 3.621 ; 3.621 ; Rise       ; divi[24]        ;
+; disUniSeg[*]   ; divi[24]   ; 3.477 ; 3.477 ; Rise       ; divi[24]        ;
+;  disUniSeg[0]  ; divi[24]   ; 3.477 ; 3.477 ; Rise       ; divi[24]        ;
+;  disUniSeg[1]  ; divi[24]   ; 3.631 ; 3.631 ; Rise       ; divi[24]        ;
+;  disUniSeg[2]  ; divi[24]   ; 3.642 ; 3.642 ; Rise       ; divi[24]        ;
+;  disUniSeg[3]  ; divi[24]   ; 3.632 ; 3.632 ; Rise       ; divi[24]        ;
+;  disUniSeg[4]  ; divi[24]   ; 3.724 ; 3.724 ; Rise       ; divi[24]        ;
+;  disUniSeg[5]  ; divi[24]   ; 3.852 ; 3.852 ; Rise       ; divi[24]        ;
+;  disUniSeg[6]  ; divi[24]   ; 3.835 ; 3.835 ; Rise       ; divi[24]        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -3.454  ; -2.289 ; N/A      ; N/A     ; -1.941              ;
+;  divi[24]        ; -3.192  ; 0.215  ; N/A      ; N/A     ; -0.742              ;
+;  reloj           ; -3.454  ; -2.289 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS  ; -92.317 ; -2.289 ; 0.0      ; 0.0     ; -62.785             ;
+;  divi[24]        ; -37.280 ; 0.000  ; N/A      ; N/A     ; -23.744             ;
+;  reloj           ; -55.037 ; -2.289 ; N/A      ; N/A     ; -39.041             ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; rst       ; divi[24]   ; 7.353 ; 7.353 ; Rise       ; divi[24]        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; rst       ; divi[24]   ; -2.742 ; -2.742 ; Rise       ; divi[24]        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; contDecMin[*]  ; divi[24]   ; 8.005  ; 8.005  ; Rise       ; divi[24]        ;
+;  contDecMin[0] ; divi[24]   ; 7.645  ; 7.645  ; Rise       ; divi[24]        ;
+;  contDecMin[1] ; divi[24]   ; 7.606  ; 7.606  ; Rise       ; divi[24]        ;
+;  contDecMin[2] ; divi[24]   ; 8.005  ; 8.005  ; Rise       ; divi[24]        ;
+;  contDecMin[3] ; divi[24]   ; 7.671  ; 7.671  ; Rise       ; divi[24]        ;
+; contDecSeg[*]  ; divi[24]   ; 8.037  ; 8.037  ; Rise       ; divi[24]        ;
+;  contDecSeg[0] ; divi[24]   ; 7.639  ; 7.639  ; Rise       ; divi[24]        ;
+;  contDecSeg[1] ; divi[24]   ; 8.037  ; 8.037  ; Rise       ; divi[24]        ;
+;  contDecSeg[2] ; divi[24]   ; 7.708  ; 7.708  ; Rise       ; divi[24]        ;
+;  contDecSeg[3] ; divi[24]   ; 7.479  ; 7.479  ; Rise       ; divi[24]        ;
+; contUniMin[*]  ; divi[24]   ; 8.322  ; 8.322  ; Rise       ; divi[24]        ;
+;  contUniMin[0] ; divi[24]   ; 7.109  ; 7.109  ; Rise       ; divi[24]        ;
+;  contUniMin[1] ; divi[24]   ; 7.396  ; 7.396  ; Rise       ; divi[24]        ;
+;  contUniMin[2] ; divi[24]   ; 7.636  ; 7.636  ; Rise       ; divi[24]        ;
+;  contUniMin[3] ; divi[24]   ; 8.322  ; 8.322  ; Rise       ; divi[24]        ;
+; contUniSeg[*]  ; divi[24]   ; 8.102  ; 8.102  ; Rise       ; divi[24]        ;
+;  contUniSeg[0] ; divi[24]   ; 7.213  ; 7.213  ; Rise       ; divi[24]        ;
+;  contUniSeg[1] ; divi[24]   ; 7.533  ; 7.533  ; Rise       ; divi[24]        ;
+;  contUniSeg[2] ; divi[24]   ; 7.066  ; 7.066  ; Rise       ; divi[24]        ;
+;  contUniSeg[3] ; divi[24]   ; 8.102  ; 8.102  ; Rise       ; divi[24]        ;
+; disDecMin[*]   ; divi[24]   ; 10.408 ; 10.408 ; Rise       ; divi[24]        ;
+;  disDecMin[0]  ; divi[24]   ; 9.459  ; 9.459  ; Rise       ; divi[24]        ;
+;  disDecMin[1]  ; divi[24]   ; 9.457  ; 9.457  ; Rise       ; divi[24]        ;
+;  disDecMin[2]  ; divi[24]   ; 10.408 ; 10.408 ; Rise       ; divi[24]        ;
+;  disDecMin[3]  ; divi[24]   ; 9.505  ; 9.505  ; Rise       ; divi[24]        ;
+;  disDecMin[4]  ; divi[24]   ; 9.074  ; 9.074  ; Rise       ; divi[24]        ;
+;  disDecMin[5]  ; divi[24]   ; 9.456  ; 9.456  ; Rise       ; divi[24]        ;
+;  disDecMin[6]  ; divi[24]   ; 8.967  ; 8.967  ; Rise       ; divi[24]        ;
+; disDecSeg[*]   ; divi[24]   ; 10.245 ; 10.245 ; Rise       ; divi[24]        ;
+;  disDecSeg[0]  ; divi[24]   ; 9.709  ; 9.709  ; Rise       ; divi[24]        ;
+;  disDecSeg[1]  ; divi[24]   ; 10.165 ; 10.165 ; Rise       ; divi[24]        ;
+;  disDecSeg[2]  ; divi[24]   ; 8.942  ; 8.942  ; Rise       ; divi[24]        ;
+;  disDecSeg[3]  ; divi[24]   ; 10.127 ; 10.127 ; Rise       ; divi[24]        ;
+;  disDecSeg[4]  ; divi[24]   ; 10.245 ; 10.245 ; Rise       ; divi[24]        ;
+;  disDecSeg[5]  ; divi[24]   ; 9.841  ; 9.841  ; Rise       ; divi[24]        ;
+;  disDecSeg[6]  ; divi[24]   ; 10.244 ; 10.244 ; Rise       ; divi[24]        ;
+; disUniMin[*]   ; divi[24]   ; 9.083  ; 9.083  ; Rise       ; divi[24]        ;
+;  disUniMin[0]  ; divi[24]   ; 9.040  ; 9.040  ; Rise       ; divi[24]        ;
+;  disUniMin[1]  ; divi[24]   ; 9.037  ; 9.037  ; Rise       ; divi[24]        ;
+;  disUniMin[2]  ; divi[24]   ; 9.069  ; 9.069  ; Rise       ; divi[24]        ;
+;  disUniMin[3]  ; divi[24]   ; 8.649  ; 8.649  ; Rise       ; divi[24]        ;
+;  disUniMin[4]  ; divi[24]   ; 8.692  ; 8.692  ; Rise       ; divi[24]        ;
+;  disUniMin[5]  ; divi[24]   ; 9.083  ; 9.083  ; Rise       ; divi[24]        ;
+;  disUniMin[6]  ; divi[24]   ; 8.718  ; 8.718  ; Rise       ; divi[24]        ;
+; disUniSeg[*]   ; divi[24]   ; 9.472  ; 9.472  ; Rise       ; divi[24]        ;
+;  disUniSeg[0]  ; divi[24]   ; 8.540  ; 8.540  ; Rise       ; divi[24]        ;
+;  disUniSeg[1]  ; divi[24]   ; 8.962  ; 8.962  ; Rise       ; divi[24]        ;
+;  disUniSeg[2]  ; divi[24]   ; 8.985  ; 8.985  ; Rise       ; divi[24]        ;
+;  disUniSeg[3]  ; divi[24]   ; 8.972  ; 8.972  ; Rise       ; divi[24]        ;
+;  disUniSeg[4]  ; divi[24]   ; 9.052  ; 9.052  ; Rise       ; divi[24]        ;
+;  disUniSeg[5]  ; divi[24]   ; 9.472  ; 9.472  ; Rise       ; divi[24]        ;
+;  disUniSeg[6]  ; divi[24]   ; 9.444  ; 9.444  ; Rise       ; divi[24]        ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; contDecMin[*]  ; divi[24]   ; 3.411 ; 3.411 ; Rise       ; divi[24]        ;
+;  contDecMin[0] ; divi[24]   ; 3.439 ; 3.439 ; Rise       ; divi[24]        ;
+;  contDecMin[1] ; divi[24]   ; 3.411 ; 3.411 ; Rise       ; divi[24]        ;
+;  contDecMin[2] ; divi[24]   ; 3.541 ; 3.541 ; Rise       ; divi[24]        ;
+;  contDecMin[3] ; divi[24]   ; 3.449 ; 3.449 ; Rise       ; divi[24]        ;
+; contDecSeg[*]  ; divi[24]   ; 3.288 ; 3.288 ; Rise       ; divi[24]        ;
+;  contDecSeg[0] ; divi[24]   ; 3.430 ; 3.430 ; Rise       ; divi[24]        ;
+;  contDecSeg[1] ; divi[24]   ; 3.565 ; 3.565 ; Rise       ; divi[24]        ;
+;  contDecSeg[2] ; divi[24]   ; 3.472 ; 3.472 ; Rise       ; divi[24]        ;
+;  contDecSeg[3] ; divi[24]   ; 3.288 ; 3.288 ; Rise       ; divi[24]        ;
+; contUniMin[*]  ; divi[24]   ; 3.182 ; 3.182 ; Rise       ; divi[24]        ;
+;  contUniMin[0] ; divi[24]   ; 3.182 ; 3.182 ; Rise       ; divi[24]        ;
+;  contUniMin[1] ; divi[24]   ; 3.329 ; 3.329 ; Rise       ; divi[24]        ;
+;  contUniMin[2] ; divi[24]   ; 3.434 ; 3.434 ; Rise       ; divi[24]        ;
+;  contUniMin[3] ; divi[24]   ; 3.628 ; 3.628 ; Rise       ; divi[24]        ;
+; contUniSeg[*]  ; divi[24]   ; 3.158 ; 3.158 ; Rise       ; divi[24]        ;
+;  contUniSeg[0] ; divi[24]   ; 3.286 ; 3.286 ; Rise       ; divi[24]        ;
+;  contUniSeg[1] ; divi[24]   ; 3.316 ; 3.316 ; Rise       ; divi[24]        ;
+;  contUniSeg[2] ; divi[24]   ; 3.158 ; 3.158 ; Rise       ; divi[24]        ;
+;  contUniSeg[3] ; divi[24]   ; 3.579 ; 3.579 ; Rise       ; divi[24]        ;
+; disDecMin[*]   ; divi[24]   ; 3.721 ; 3.721 ; Rise       ; divi[24]        ;
+;  disDecMin[0]  ; divi[24]   ; 3.928 ; 3.928 ; Rise       ; divi[24]        ;
+;  disDecMin[1]  ; divi[24]   ; 3.857 ; 3.857 ; Rise       ; divi[24]        ;
+;  disDecMin[2]  ; divi[24]   ; 3.993 ; 3.993 ; Rise       ; divi[24]        ;
+;  disDecMin[3]  ; divi[24]   ; 3.881 ; 3.881 ; Rise       ; divi[24]        ;
+;  disDecMin[4]  ; divi[24]   ; 3.721 ; 3.721 ; Rise       ; divi[24]        ;
+;  disDecMin[5]  ; divi[24]   ; 3.848 ; 3.848 ; Rise       ; divi[24]        ;
+;  disDecMin[6]  ; divi[24]   ; 3.743 ; 3.743 ; Rise       ; divi[24]        ;
+; disDecSeg[*]   ; divi[24]   ; 3.570 ; 3.570 ; Rise       ; divi[24]        ;
+;  disDecSeg[0]  ; divi[24]   ; 3.660 ; 3.660 ; Rise       ; divi[24]        ;
+;  disDecSeg[1]  ; divi[24]   ; 3.624 ; 3.624 ; Rise       ; divi[24]        ;
+;  disDecSeg[2]  ; divi[24]   ; 3.629 ; 3.629 ; Rise       ; divi[24]        ;
+;  disDecSeg[3]  ; divi[24]   ; 3.597 ; 3.597 ; Rise       ; divi[24]        ;
+;  disDecSeg[4]  ; divi[24]   ; 3.696 ; 3.696 ; Rise       ; divi[24]        ;
+;  disDecSeg[5]  ; divi[24]   ; 3.570 ; 3.570 ; Rise       ; divi[24]        ;
+;  disDecSeg[6]  ; divi[24]   ; 3.699 ; 3.699 ; Rise       ; divi[24]        ;
+; disUniMin[*]   ; divi[24]   ; 3.531 ; 3.531 ; Rise       ; divi[24]        ;
+;  disUniMin[0]  ; divi[24]   ; 3.656 ; 3.656 ; Rise       ; divi[24]        ;
+;  disUniMin[1]  ; divi[24]   ; 3.657 ; 3.657 ; Rise       ; divi[24]        ;
+;  disUniMin[2]  ; divi[24]   ; 3.665 ; 3.665 ; Rise       ; divi[24]        ;
+;  disUniMin[3]  ; divi[24]   ; 3.531 ; 3.531 ; Rise       ; divi[24]        ;
+;  disUniMin[4]  ; divi[24]   ; 3.605 ; 3.605 ; Rise       ; divi[24]        ;
+;  disUniMin[5]  ; divi[24]   ; 3.728 ; 3.728 ; Rise       ; divi[24]        ;
+;  disUniMin[6]  ; divi[24]   ; 3.621 ; 3.621 ; Rise       ; divi[24]        ;
+; disUniSeg[*]   ; divi[24]   ; 3.477 ; 3.477 ; Rise       ; divi[24]        ;
+;  disUniSeg[0]  ; divi[24]   ; 3.477 ; 3.477 ; Rise       ; divi[24]        ;
+;  disUniSeg[1]  ; divi[24]   ; 3.631 ; 3.631 ; Rise       ; divi[24]        ;
+;  disUniSeg[2]  ; divi[24]   ; 3.642 ; 3.642 ; Rise       ; divi[24]        ;
+;  disUniSeg[3]  ; divi[24]   ; 3.632 ; 3.632 ; Rise       ; divi[24]        ;
+;  disUniSeg[4]  ; divi[24]   ; 3.724 ; 3.724 ; Rise       ; divi[24]        ;
+;  disUniSeg[5]  ; divi[24]   ; 3.852 ; 3.852 ; Rise       ; divi[24]        ;
+;  disUniSeg[6]  ; divi[24]   ; 3.835 ; 3.835 ; Rise       ; divi[24]        ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; divi[24]   ; divi[24] ; 262      ; 0        ; 0        ; 0        ;
+; divi[24]   ; reloj    ; 1        ; 1        ; 0        ; 0        ;
+; reloj      ; reloj    ; 324      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; divi[24]   ; divi[24] ; 262      ; 0        ; 0        ; 0        ;
+; divi[24]   ; reloj    ; 1        ; 1        ; 0        ; 0        ;
+; reloj      ; reloj    ; 324      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 16    ; 16   ;
+; Unconstrained Output Ports      ; 44    ; 44   ;
+; Unconstrained Output Port Paths ; 124   ; 124  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 04 17:05:17 2017
+Info: Command: quartus_sta minutero -c minutero
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'minutero.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name reloj reloj
+    Info (332105): create_clock -period 1.000 -name divi[24] divi[24]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.454
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.454       -55.037 reloj 
+    Info (332119):    -3.192       -37.280 divi[24] 
+Info (332146): Worst-case hold slack is -2.289
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.289        -2.289 reloj 
+    Info (332119):     0.499         0.000 divi[24] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941       -39.041 reloj 
+    Info (332119):    -0.742       -23.744 divi[24] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.660
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.660        -5.388 reloj 
+    Info (332119):    -0.293        -1.944 divi[24] 
+Info (332146): Worst-case hold slack is -1.318
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.318        -1.318 reloj 
+    Info (332119):     0.215         0.000 divi[24] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -26.380 reloj 
+    Info (332119):    -0.500       -16.000 divi[24] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 437 megabytes
+    Info: Processing ended: Wed Oct 04 17:05:19 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

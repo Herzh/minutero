@@ -1,0 +1,143 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;		-- Simbolos aritmeticos
+use ieee.std_logic_unsigned.all; -- Da solo valores absolutos
+
+entity minutero is
+
+port(
+		clk:     in std_logic;
+		rst: 		in std_logic;
+		--updown:	in std_logic;
+		
+		--a: 	inout std_logic_vector(1 downto 0);
+		disUniSeg:	inout std_logic_vector( 6 downto 0);
+		disDecSeg:	inout std_logic_vector( 6 downto 0);
+		disUniMin:	inout std_logic_vector( 6 downto 0);
+		disDecMin:	inout std_logic_vector( 6 downto 0);
+		
+		contUniSeg:	inout std_logic_vector ( 3 downto 0);
+		contDecSeg:	inout std_logic_vector ( 2 downto 0); 
+		contUniMin:	inout std_logic_vector ( 3 downto 0);
+		contDecMin:	inout std_logic_vector ( 2 downto 0)	
+		
+		--d:		out std_logic_vector(6 downto 0);
+		--l:		inout std_logic_vector(3 downto 0)
+		);
+		
+end minutero;
+
+
+architecture conteo of minutero is
+begin
+
+	cuenta:process (rst)  --Lista sensitva 
+	begin
+			if (rst = '0') then
+				contUniSeg 	<= "0000";
+				contDecSeg	<= "000";
+				contUniMin	<= "0000";
+				contDecMin	<=	"000";
+			
+			else if(clk 'event and clk = '1') then   -- Pulso de Reloj (' atributo )
+				
+				contUniSeg <= "0000";
+				contUniSeg <= contUniSeg + 1;
+				
+				if (contUniSeg = "1010") then
+					contDecSeg <= contDecSeg + 1;
+					contUniSeg <= "0000";
+				
+					if (contDecSeg = "110") then
+						contUniMin <= contDecMin + 1;
+						contDecSeg <= "0000";
+						
+						if ( contUniMin = "1010") then
+							contDecMin <= contDecMin + 1;
+							contUniMin <= "0000";
+						
+							if ( contDecMin = "110") then
+								contUniSeg <= "0000";
+								contDecSeg <= "000";
+								contUniMin <= "0000";
+								contDecMin <= "000";
+							end if;
+						end if;
+					end if;
+				end if;		
+			end if;
+			end if;
+		
+	end process cuenta;
+
+	
+	numUniSeg:process (contUniSeg) begin 	
+		case a is
+			when "0000" => disUniSeg <="0000001"; -- 0
+			when "0001" => disUniSeg <="1001111"; -- 1
+			when "0010" => disUniSeg <="0010010"; -- 2
+			when "0011" => disUniSeg <="0000110"; -- 3
+			when "0100" => disUniSeg <="1001100"; -- 4
+			when "0101" => disUniSeg <="0100100"; -- 5
+			when "0110" => disUniSeg <="0100000"; -- 6
+			when "0111" => disUniSeg <="0001111"; -- 7
+			when "1000" => disUniSeg <="0000000"; -- 8
+			when "1001" => disUniSeg <="0000100"; -- 9
+			when others => disUniSeg <="1111111"; -- n/a
+		
+		end case;
+	end process numUniSeg;
+	
+	numDecSeg:process (contDecSeg) begin 	
+		case a is
+			when "0000" => disDecSeg <="0000001"; -- 0
+			when "0001" => disDecSeg <="1001111"; -- 1
+			when "0010" => disDecSeg <="0010010"; -- 2
+			when "0011" => disDecSeg <="0000110"; -- 3
+			when "0100" => disDecSeg <="1001100"; -- 4
+			when "0101" => disDecSeg <="0100100"; -- 5
+			when "0110" => disDecSeg <="0100000"; -- 6
+			--when "0111" => disUniSeg <="0001111"; -- 7
+			--when "1000" => disUniSeg <="0000000"; -- 8
+			--when "1001" => disUniSeg <="0000100"; -- 9
+			when others => disUniSeg <="1111111"; -- n/a
+		
+		end case;
+	end process numDecSeg;
+	
+	numUniMin:process (contUniMin) begin 	
+		case a is
+			when "0000" => disUniMin <="0000001"; -- 0
+			when "0001" => disUniMin <="1001111"; -- 1
+			when "0010" => disUniMin <="0010010"; -- 2
+			when "0011" => disUniMin <="0000110"; -- 3
+			when "0100" => disUniMin <="1001100"; -- 4
+			when "0101" => disUniMin <="0100100"; -- 5
+			when "0110" => disUniMin <="0100000"; -- 6
+			when "0111" => disUniMin <="0001111"; -- 7
+			when "1000" => disUniMin <="0000000"; -- 8
+			when "1001" => disUniMin <="0000100"; -- 9
+			when others => disUniMin <="1111111"; -- n/a
+		
+		end case;
+	end process numUniMin;
+	
+		numDecMin:process (contDecMin) begin 	
+		case a is
+			when "0000" => disDecMin <="0000001"; -- 0
+			when "0001" => disDecMin <="1001111"; -- 1
+			when "0010" => disDecMin <="0010010"; -- 2
+			when "0011" => disDecMin <="0000110"; -- 3
+			when "0100" => disDecMin <="1001100"; -- 4
+			when "0101" => disDecMin <="0100100"; -- 5
+			when "0110" => disDecMin <="0100000"; -- 6
+			--when "0111" => disUniSeg <="0001111"; -- 7
+			--when "1000" => disUniSeg <="0000000"; -- 8
+			--when "1001" => disUniSeg <="0000100"; -- 9
+			when others => disDecMin <="1111111"; -- n/a
+		
+		end case;
+	end process numDecMin;
+	
+end conteo;
